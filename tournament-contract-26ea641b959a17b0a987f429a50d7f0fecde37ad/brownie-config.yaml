@@ -1,0 +1,36 @@
+# settings for state-based tests.
+hypothesis:
+  max_examples: 10
+  stateful_step_count: 200
+  report_multiple_bugs: False
+
+# set a custom mnemonic for the development network
+networks:
+  default: development
+  development:
+    persist: false
+    cmd_settings:
+      mnemonic: rocketcapital
+      accounts: 20
+      port: 8228
+  mainnet-fork:
+    persist: false
+    cmd_settings:
+      mnemonic: capitalrocket
+      accounts: 20
+      port: 8383
+
+compiler:
+  evm_version: istanbul
+  solc:
+    version: 0.8.4
+    optimizer:
+      enabled: true
+      runs: 200
+    remappings: null
+  vyper:
+    version: null
+
+
+# enable output of development artifacts to load with react
+dev_deployment_artifacts: true
