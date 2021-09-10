@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  a {
+    @apply text-blue-800;
+    @apply hover:underline;
+  }
+} */
